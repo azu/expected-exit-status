@@ -44,8 +44,6 @@ if (!Number.isInteger(exitStatusNumber)) {
 const result = expectedExitStatus(cli.flags.command, exitStatusNumber);
 if (!result.ok) {
     console.log(`Expected exit status: ${exitStatusNumber}, but actual exit status is ${result.status}`);
-    console.log(result.stdout);
-    console.error(result.stderr);
     process.exit(1);
 }
 process.exit(0);
