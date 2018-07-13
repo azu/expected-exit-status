@@ -1,0 +1,47 @@
+{
+  "name": "expected-exit-status",
+  "version": "1.0.0",
+  "description": "A CLI check that command exit status is expected.",
+  "keywords": [
+    "cli",
+    "command",
+    "linux",
+    "test",
+    "testing",
+    "windows"
+  ],
+  "homepage": "https://github.com/azu/expected-exit-status",
+  "bugs": {
+    "url": "https://github.com/azu/expected-exit-status/issues"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/expected-exit-status.js",
+  "bin": {
+    "expected-exit-status": "./bin/cmd.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/expected-exit-status.git"
+  },
+  "scripts": {
+    "test": "npm run test:0 && npm run test:1 && npm run test:2 && npm run test:example",
+    "test:0": "./bin/cmd.js 0 --command \"exit 0\"",
+    "test:1": "./bin/cmd.js 1 --command \"exit 1\"",
+    "test:2": "./bin/cmd.js 2 --command \"exit 2\"",
+    "test:example": "./bin/cmd.js 0 --command \"ls\""
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5",
+    "meow": "^5.0.0"
+  }
+}
