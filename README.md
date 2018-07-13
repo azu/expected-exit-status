@@ -25,6 +25,12 @@ Install with [npm](https://www.npmjs.com/):
       $ expected-exit-status 0 --command "exit 1"
       // $? => 1
 
+## Usecase
+
+If you want to test if "abc-command" should be failed(exit status `1`), you can write following.
+
+  $ expected-exit-status 1 --command "abc-command"
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/expected-exit-status/releases).
