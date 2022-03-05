@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
-const meow = require("meow");
-const expectedExitStatus = require("../lib/expected-exit-status.js").expectedExitStatus;
+import meow from "meow";
+import { expectedExitStatus } from "../lib/expected-exit-status.js";
 
 const cli = meow(
     `
@@ -23,6 +23,7 @@ const cli = meow(
                 type: "string"
             }
         },
+        importMeta: import.meta,
         autoVersion: true,
         autoHelp: true
     }

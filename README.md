@@ -1,4 +1,4 @@
-# expected-exit-status [![Build Status](https://travis-ci.org/azu/expected-exit-status.svg?branch=master)](https://travis-ci.org/azu/expected-exit-status)
+# expected-exit-status [![Actions Status: test](https://github.com/azu/expected-exit-status/workflows/test/badge.svg)](https://github.com/azu/expected-exit-status/actions?query=workflow%3A"test")
 
 A CLI check that command exit status is expected.
 
