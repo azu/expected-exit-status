@@ -21,6 +21,8 @@ const USAGE = `
       $ expected-exit-status 0 --command "echo 'foo' && exit 1" --stdout "foo"
       # stderr test -> It is ok
       $ expected-exit-status 1 --command "echo 'err' >&2 && exit 1" --stderr "err"
+      # regexp test -> It is ok
+      $ expected-exit-status 1 --command "echo '3 problems' && exit 1" --stdout "/\\d problems/"
 `
 
 const {

@@ -18,12 +18,21 @@ Install with [npm](https://www.npmjs.com/):
 
     Options:
       --command Execute command
+      --stdout  Expected stdout. "pattern" or "/pattern/"
+      --stderr  Expected stderr. "pattern" or "/pattern/"
 
     Examples
+      # exit status test -> It is ok
       $ expected-exit-status 1 --command "exit 1"
-      // $? => 0
+      // $? => 0 -> It throws error
       $ expected-exit-status 0 --command "exit 1"
-      // $? => 1
+      # stdout test -> It is ok
+      $ expected-exit-status 0 --command "echo 'foo' && exit 1" --stdout "foo"
+      # stderr test -> It is ok
+      $ expected-exit-status 1 --command "echo 'err' >&2 && exit 1" --stderr "err"
+      # regexp test -> It is ok
+      $ expected-exit-status 1 --command "echo '3 problems' && exit 1" --stdout "/\d problems/"
+
 
 ## Usecase
 
