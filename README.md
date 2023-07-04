@@ -11,6 +11,8 @@ Install with [npm](https://www.npmjs.com/):
 
     npm install expected-exit-status
 
+- Requires Node.js 18+
+
 ## Usage
 
     Usage
