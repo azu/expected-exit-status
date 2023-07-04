@@ -39,10 +39,11 @@
     "test:0": "./bin/cmd.mjs 0 --command \"exit 0\"",
     "test:1": "./bin/cmd.mjs 1 --command \"exit 1\"",
     "test:2": "./bin/cmd.mjs 2 --command \"exit 2\"",
+    "test:stdout": "./bin/cmd.mjs 0 --stdout \"teststdout\" --command \"echo 'teststdout' && exit 0\"",
+    "test:stderr": "./bin/cmd.mjs 1 --stdout \"error\" --command \"echo 'error' && exit 1\"",
     "test:example": "./bin/cmd.mjs 0 --command \"ls\""
   },
   "dependencies": {
-    "cross-spawn": "^7.0.3",
-    "meow": "^10.1.2"
+    "cross-spawn": "^7.0.3"
   }
 }
