@@ -3,7 +3,9 @@
 A CLI check that command exit status is expected.
 
 - Cross platform(Windows/Linux/macOS) support
-- Test command's exit code
+- Test command exit code
+- Test command stdout
+- Test command stderr
 
 ## Install
 
