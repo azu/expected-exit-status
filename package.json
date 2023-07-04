@@ -1,6 +1,6 @@
 {
   "name": "expected-exit-status",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "description": "A CLI check that command exit status is expected.",
   "keywords": [
