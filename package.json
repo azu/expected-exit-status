@@ -35,7 +35,7 @@
     "url": "https://github.com/azu/expected-exit-status.git"
   },
   "scripts": {
-    "test": "npm run test:0 && npm run test:1 && npm run test:2 && npm run test:example",
+    "test": "npm-run-all test:*",
     "test:0": "./bin/cmd.mjs 0 --command \"exit 0\"",
     "test:1": "./bin/cmd.mjs 1 --command \"exit 1\"",
     "test:2": "./bin/cmd.mjs 2 --command \"exit 2\"",
@@ -45,5 +45,8 @@
   },
   "dependencies": {
     "cross-spawn": "^7.0.3"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
