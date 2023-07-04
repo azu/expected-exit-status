@@ -11,6 +11,7 @@ const USAGE = `
       --command Execute command
       --stdout  Expected stdout. "pattern" or "/pattern/"
       --stderr  Expected stderr. "pattern" or "/pattern/"
+      --silent  Suppress stdout and stderr
 
     Examples
       # exit status test -> It is ok
@@ -40,6 +41,10 @@ const {
         stderr: {
             type: "string"
         },
+        silent: {
+            type: "boolean",
+            default: false
+        },
         help: {
             type: "boolean",
             alias: "h"
@@ -65,6 +70,7 @@ if (!Number.isInteger(exitStatusNumber)) {
 }
 const result = expectedExitStatus({
     command: values.command,
+    silent: values.silent,
     expected: {
         exitStatus: exitStatusNumber,
         stdout: values.stdout,
