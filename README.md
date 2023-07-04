@@ -22,6 +22,7 @@ Install with [npm](https://www.npmjs.com/):
       --command Execute command
       --stdout  Expected stdout. "pattern" or "/pattern/"
       --stderr  Expected stderr. "pattern" or "/pattern/"
+      --silent  Suppress stdout and stderr
 
     Examples
       # exit status test -> It is ok
