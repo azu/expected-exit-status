@@ -2,7 +2,7 @@ name: test
 on: [push, pull_request]
 jobs:
   test:
-    name: "Test on Node.js ${{ matrix.node-version }}"
+    name: "Test on Node.js ${{ matrix.node-version }} on ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
