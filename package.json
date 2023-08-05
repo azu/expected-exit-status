@@ -41,7 +41,9 @@
     "test:2": "./bin/cmd.mjs 2 --command \"exit 2\"",
     "test:stdout": "./bin/cmd.mjs 0 --stdout \"teststdout\" --command \"echo 'teststdout' && exit 0\"",
     "test:stderr": "./bin/cmd.mjs 1 --stdout \"error\" --command \"echo 'error' && exit 1\"",
-    "test:example": "./bin/cmd.mjs 0 --command \"ls\""
+    "test:example": "./bin/cmd.mjs 0 --command \"ls\"",
+    "test:npm": "./bin/cmd.mjs 0 --command \"npm run test:0\"",
+    "test:npx": "./bin/cmd.mjs 0 --command \"npx --yes envinfo\""
   },
   "dependencies": {
     "cross-spawn": "^7.0.3"
